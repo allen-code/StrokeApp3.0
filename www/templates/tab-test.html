@@ -1,0 +1,47 @@
+<ion-view view-title="Test">
+
+ <ion-pane ng-controller="appController as appCtrl">
+        <!--header bar-->
+      <div class="bar bar-header bar-stable">
+          <h1 class="title">Balance Test</h1>
+      </div>
+    <!--<div id="status"></div>-->
+    <!-- show accelerometer an magnetometer data-->
+      <br/>
+      <br/>
+
+      </br>
+      </br>
+    <!--tabs-->
+      <div class="card">
+        <div class="item item-text-wrap">
+          <b>Hi, how about taking a test !</b>
+        </div>
+      </div > 
+      <div style="width:360px; margin:0 auto;">      
+        <button class="button button-block button-assertive" onclick="hideDiv();" ><b>Stop</b></button>
+      </div>
+
+      
+      <div class="container">
+        <br/>
+        <div style="width:360px; margin:0 auto;">
+          <button class="button button-block button-positive" name="answer" value="Test" onclick="showDiv(); timeoutGo(); "><b>Test<b></button>
+        </div>
+
+        <br/><br/>
+        <div id="status" style="width:200px; margin:0 auto;"></div>    
+        <div id = "testzone" style = "display:none;" >
+
+          <div id = "accelerometer"></div>
+          <br/><br/>
+          <div id = "magnetometer"></div>
+
+          <div id="output"></div>
+        </div>
+        
+      </div>
+    </ion-pane>
+  </ion-view>
+
+  
