@@ -1,6 +1,6 @@
 <ion-view view-title="Test">
-
- <ion-pane ng-controller="appController as appCtrl">
+  <ion-content >
+    <ion-pane >
         <!--header bar-->
       <div class="bar bar-header bar-stable">
           <h1 class="title">Balance Test</h1>
@@ -9,39 +9,41 @@
     <!-- show accelerometer an magnetometer data-->
       <br/>
       <br/>
-
+  <div id="justfortest" style="display:none"></div>
       </br>
       </br>
     <!--tabs-->
       <div class="card">
         <div class="item item-text-wrap">
-          <b>Hi, how about taking a test !</b>
+          <b>Hi John, would you like to take a test !</b>
         </div>
       </div > 
-      <div style="width:360px; margin:0 auto;">      
-        <button class="button button-block button-assertive" onclick="hideDiv();" ><b>Stop</b></button>
+      <div style="width:95%; margin:0 auto;">      
+        <button id="stop-button" class="button button-block button-assertive" onclick="hideDiv(); addrows()" ><b>Stop</b></button>
       </div>
-
+      <div style="width:95%; margin:0 auto;">
+        <button id="test-button" class="button button-block button-positive" name="answer" value="Test" onclick="showDiv(); timeoutGo(); "><b>Test<b></button>
+      </div>
       
-      <div class="container">
+      <div id="container">
         <br/>
-        <div style="width:360px; margin:0 auto;">
-          <button class="button button-block button-positive" name="answer" value="Test" onclick="showDiv(); timeoutGo(); "><b>Test<b></button>
-        </div>
-
         <br/><br/>
-        <div id="status" style="width:200px; margin:0 auto;"></div>    
-        <div id = "testzone" style = "display:none;" >
+        <div id="status" style="width:200px; margin:0 auto;"></div>
 
+        <!-- test zone -->    
+        <div id = "testzone" style = "display:none;" >
           <div id = "accelerometer"></div>
           <br/><br/>
           <div id = "magnetometer"></div>
-
           <div id="output"></div>
         </div>
-        
       </div>
+        <!--<div id="test_ok" class = "button  button-large button-positive" style = "display:none; text-align:center" onclick="hideButton(this)">Ok</div>
+        <br>-->
+        <div id="confirm" class = "button  button-large button-assertive" style = "display:none;" onclick="hideButton(this)">Nope</div>
+        <div id="test_later" class = "button  button-large button-positive" style = "display:none;" onclick="hideButton(this)">Sure, 20 min later</div>
     </ion-pane>
-  </ion-view>
+  </ion-content>  
+</ion-view>
 
   

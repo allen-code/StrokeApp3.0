@@ -20,11 +20,16 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
+
 .controller('DashCtrl', function($scope, $rootScope, $ionicUser, $ionicPush, $log) {
+  //draw chart
+  $scope.init = function(){
+    drawMonth();
+    drawWeek();
+  };
   // Identifies a user with the Ionic User service
   $scope.identifyUser = function() {
     $log.info('Ionic User: Identifying with Ionic User service');
-
     var user = $ionicUser.get();
     if(!user.user_id) {
       // Set your user_id here, or generate a random one.
@@ -42,6 +47,7 @@ angular.module('starter.controllers', [])
       $scope.identified = true;
       alert('Identified user ' + user.name + '\n ID ' + user.user_id);
     });
+    
   };
 
     // Registers a device for push notifications and stores its token
@@ -83,5 +89,8 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+  $scope.times = {
+
+  }
 });
 

@@ -6,29 +6,29 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
+    name: 'Jim Warren',
     lastText: 'How is your last test?',
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+    face: 'https://www.cs.auckland.ac.nz/~jim/Jim2012.jpg'
   }, {
     id: 1,
-    name: 'Max Lynx',
+    name: 'Karen Day',
     lastText: 'Hey, it\'s me',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    face: 'https://unimelbadventures.files.wordpress.com/2013/08/karen_day_university_of_melbourn_300.jpg'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
+    name: 'Sathiamoorthy Mano',
     lastText: 'This is your feedback',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
+    face: 'https://www.cs.auckland.ac.nz/images/staff/sman063.jpg'
   }, {
     id: 3,
-    name: 'Perry Governor',
+    name: 'Nevil Brownlee',
     lastText: 'Check this website to view more stroke info! http://www.stroke.org.nz/',
-    face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
+    face: 'https://www.cs.auckland.ac.nz/images/staff/jbro111.jpg'
   }, {
     id: 4,
-    name: 'Mike Harrington',
+    name: 'Radu Nicolescu',
     lastText: 'You can do it.',
-    face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
+    face: 'https://www.cs.auckland.ac.nz/images/staff/rnic033.jpg'
   }];
 
   return {
@@ -47,4 +47,6 @@ angular.module('starter.services', [])
       return null;
     }
   };
+
 });
+

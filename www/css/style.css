@@ -1,5 +1,15 @@
 /* Empty. Add your own CSS if you like */
 
+/* Container Border */
+#container {
+border: 5px solid #ECEDE6;
+border-radius: 10px;
+width: 95%;
+height: 220px;
+margin-top: 5%;
+margin-left: 2.5%;
+}
+
 #ball {
   /*display: block;*/
   width: 50px;
@@ -7,7 +17,7 @@
   /*margin: 30px auto 0;*/
   position: absolute;
   left: 50%;
-  top: 70%;
+  top: 58%;
   background-color: #3b4ba3;
   border-radius: 50%;
   box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
@@ -15,6 +25,50 @@
   background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);  
   background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
   background-image: -ms-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+}
+
+
+
+#test-success {
+  position: absolute;
+  left: 38%;
+  top: 49%;
+  width: 30%;
+  height: 25%;
+  content:url('success-icon.png');
+  animation: slide 2s infinite;
+}​
+
+#test-fail {
+  position: absolute;
+  left: 38%;
+  top: 49%;
+  width: 30%;
+  height: 25%;
+  content:url('attention-icon-yellow.png');
+  animation: slide 2s infinite;
+}
+
+#confirm{
+  margin-left: 5%;
+}
+
+#test_later{
+  margin-left: 5%;
+
+}
+
+@keyframes slide {
+  0% {
+    tansform: translate3d(0px, 0px, 0px);
+  }
+  50% {
+    tansform: translate3d(100px, 100px, 0px);
+    opacity: .2;
+  }
+  100% {
+    tansform: translate3d(0px, 0px, 0px);
+  }
 }
 
 

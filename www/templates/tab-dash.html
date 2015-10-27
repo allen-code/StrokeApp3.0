@@ -1,33 +1,36 @@
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
+<ion-view view-title="Dashboard" ng-init="init()">
+  <ion-content class="padding" onload = "draw_line">
     <div class="list card">
-      <div class="item item-divider">Today</div>
+      <div class="item item-divider"> daily scoreborad <b>sector 1</b></div>
       <div class="item item-body">
         <div>
-          daily scoreborad <b>sector 1</b>
+          Today
+          <div id="chart_day" width="95%" height="10"></div>
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">This week</div>
+      <div class="item item-divider">Weekly scoreboard <b>sector 2</b></div>
       <div class="item item-body">
         <div>
-          Weekly scoreboard <b>sector 2</b>
+          This week
+          <div id="chart_week" width="95%" height="10"></div>
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">This month</div>
+      <div class="item item-divider">Monthly scoreboard <b>sector 3</b></div>
       <div class="item item-body">
         <div>
-          Monthly scoreboard <b>sector 3</b> 
+          This month
+          <div id="chart_month" width="95%" height="10"></div>
         </div>
       </div>
     </div>
-    <button class="button button-block button-dark" ng-click="identifyUser()">
+    <button id="identify-button" class="button button-block button-dark" ng-click="identifyUser()">
       Identify a user
     </button>
-    <button class="button button-block button-stable" ng-if="identified" ng-click="pushRegister()">
+    <button id="register-button" class="button button-block button-stable" ng-if="identified" ng-click="pushRegister()">
       Register for Push
     </button>
   </ion-content>
